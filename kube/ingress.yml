@@ -1,0 +1,13 @@
+apiVersion: extensions/v1beta1
+kind: Ingress
+metadata:
+  name: hello-go-ingress
+spec:
+  rules:
+    - host: hello-go
+      http:
+        paths:
+          - path: /
+            backend:
+              serviceName: hello-go
+              servicePort: 8080
